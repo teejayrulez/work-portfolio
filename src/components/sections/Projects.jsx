@@ -72,7 +72,7 @@ export const Projects = () => {
             </div>
           </div>
 
-         /* <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
+         <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
             <h3 className="text-xl font-bold mb-2">Netflix Clone</h3>
             <p className="text-gray-400 mb-4">
               A cloned site of the Popularly Known TV Shows broadcasting company
@@ -104,7 +104,6 @@ export const Projects = () => {
               </a>
             </div>
           </div>
-          */
 
           <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
             <h3 className="text-xl font-bold mb-2">ObserverTask</h3>
