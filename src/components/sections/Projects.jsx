@@ -73,9 +73,9 @@ export const Projects = () => {
           </div>
 
          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
-            <h3 className="text-xl font-bold mb-2">Netflix Clone</h3>
+            <h3 className="text-xl font-bold mb-2">Bright Tech Solution</h3>
             <p className="text-gray-400 mb-4">
-              A cloned site of the Popularly Known TV Shows broadcasting company
+              A site where you can gain financial knowledge on savings, budgeting, and more.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
@@ -91,16 +91,16 @@ export const Projects = () => {
 
             <div className="flex justify-between items-center">
               <a
-                href="https://learnable-netclone.vercel.app/"
+                href="https://brightechsolution.vercel.app/"
                 className="text-blue-400 hover:text-blue-300 transition-colors my-4"
               >
                 View Project
               </a>
               <a
-                href="https://github.com/teejayrulez/Learnable-Netflix-Clone"
+                href="https://github.com/teejayrulez/BTS-site"
                 className="text-blue-400 hover:text-blue-300 transition-colors my-4"
               >
-                Github
+                Github(Private)
               </a>
             </div>
           </div>
