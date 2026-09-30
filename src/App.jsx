@@ -10,7 +10,8 @@ import { Projects } from "./components/sections/Projects";
 import { Certifications } from "./components/sections/Certifications";
 import { Contact } from "./components/sections/Contact";
 import { BackToTop } from "./components/BackToTop";
-import { AutoHideScrollbar } from "./components/AutoHideScrollbar"
+import { AutoHideScrollbar } from "./components/AutoHideScrollbar";
+import { ScrollToTopOnRefresh } from "./components/ScrollToTopOnRefresh";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,14 +25,14 @@ function App() {
 
   return (
     <>
-    <AutoHideScrollbar />
+      <ScrollToTopOnRefresh />
+      <AutoHideScrollbar />
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`min-h-screen transition-opacity duration-1000 ${
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-[#0a0a0a] text-gray-100 relative overflow-x-hidden`}
       >
-        {/* Animated background */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-red-600/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
