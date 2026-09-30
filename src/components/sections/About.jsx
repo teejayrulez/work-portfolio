@@ -1,95 +1,128 @@
-import { RevealOnScroll } from "../RevealOnScroll";
+import { RevealOnScroll } from "../RevealOnScroll"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons"
 
 export const About = () => {
+  const experience = [
+    {
+      year: "2026 - Present",
+      role: "Full Stack Tutor",
+      company: "Digital Dreams Academy",
+      points: [
+        "Teaching students HTML, CSS, and JavaScript for the frontend.",
+        "Instructing PHP and Laravel for backend development.",
+      ],
+    },
+    {
+      year: "2024 - Present",
+      role: "Frontend Developer",
+      company: "Glowny Tech Academy",
+      points: [
+        "Creating websites for startup companies using React.js.",
+        "Designed content for social media as their design creator.",
+      ],
+    },
+    {
+      year: "2023 - 2024",
+      role: "Intern",
+      company: "Genesys Learnable",
+      points: [
+        "Built a Learning Management System (LMS) website using React and Tailwind CSS.",
+        "Took part in a Design sprint and Scrum week during the internship.",
+      ],
+    },
+    {
+      year: "2022 - Present",
+      role: "Full-Stack Developer",
+      company: "Freelancer",
+      points: [
+        "Developed full-stack web applications using React, Node.js, Express, and REST APIs.",
+        "Integrated frontend applications with backend services and databases.",
+      ],
+    },
+  ]
 
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center py-20"
-    >
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-red-600 bg-clip-text text-transparent text-center">
-          About Me
-        </h2>
-        <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-          <p className="text-gray-300 mb-6">
-            Passionate developer with expertise in building scalable web
-            application and creating innovation solutions.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Front-end</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  React
-                </span>
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  Javascript
-                </span>
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  TailwindCSS
-                </span>
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  TypeScript
-                </span>
-              </div>
-            </div>
+    <section id="about" className="min-h-screen flex items-center justify-center py-20 px-4 relative">
+      <div className="max-w-5xl mx-auto w-full">
+        <RevealOnScroll>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gradient">
+              About Me
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto rounded-full" />
+          </div>
+        </RevealOnScroll>
 
-            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Back-end</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  Node.js
-                </span>
-                <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                  Express.js
-                </span>
-              </div>
+        <RevealOnScroll>
+          <div className="glass rounded-2xl p-6 sm:p-8 mb-8 hover:-translate-y-1 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)]">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              I am a creative full-stack developer dedicated to developing and
+              optimizing interactive, user-friendly, and feature-rich websites.
+              With strong attention to detail, I deliver original and efficient
+              web solutions; from building new websites from scratch to
+              enhancing existing ones. My passion lies in crafting exceptional
+              digital experiences that blend performance with aesthetics.
+            </p>
+          </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={100}>
+          <div className="mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">
+                <FontAwesomeIcon icon={faBriefcase} className="w-4 h-4" />
+              </span>
+              Work Experience
+            </h3>
+
+            <div className="relative border-l-2 border-white/10 pl-6 sm:pl-8 space-y-8">
+              {experience.map((exp, i) => (
+                <RevealOnScroll
+                  key={i}
+                  direction={i % 2 === 0 ? "left" : "right"}
+                  delay={i * 100}
+                >
+                  <div className="relative group">
+                    <div className="absolute -left-[33px] sm:-left-[41px] top-1 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-blue-500 group-hover:bg-blue-500 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-300" />
+                    <div className="text-xs font-mono text-blue-400 mb-1">{exp.year}</div>
+                    <h4 className="text-lg font-bold text-white">{exp.role}</h4>
+                    <div className="text-sm text-gray-400 mb-2">{exp.company}</div>
+                    <ul className="space-y-1.5">
+                      {exp.points.map((point, j) => (
+                        <li key={j} className="text-sm text-gray-400 flex gap-2">
+                          <span className="text-blue-500 mt-1">▹</span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </RevealOnScroll>
+              ))}
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div className="p-6 rounded-xl border-white/10 border hover:-0-translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4">Education</h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>
-                <strong>B.Sc in Computer Science</strong> - Enugu State
-                University of Science and Technology(ESUT) [2017-2022]
-              </li>
-              <li>
-                Relevent Coursework: Data Structure, Web development, Cloud
-                Computing
-              </li>
-            </ul>
-          </div>
-          <div className="p-6 rounded-xl border-white/10 border hover:-0-translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4">Work Experience</h3>
-            <div className="space-y-4 text-gray-300">
-              <div>
-                <h4 className="font-semibold">
-                  Frontend Developer at Glowny Tech Academy [2024 - Present]
-                </h4>
-                <p>Created company website</p>
-                <p>Taught as a Frontend Teacher</p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold">
-                  Intern at Genesys [2023 - 2024]
-                </h4>
-                <p>
-                  Asssisted in buliding front-end components and integrating
-                  REST APIs
-                </p>
-                <p>
-                  Worked with product designers and Co developers to create a
-                  site called "LIFEDROP"
+        <RevealOnScroll delay={200} direction="right">
+          <div className="glass rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-all duration-500">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400">
+                <FontAwesomeIcon icon={faGraduationCap} className="w-4 h-4" />
+              </span>
+              Education
+            </h3>
+            <div>
+              <h4 className="text-lg font-bold text-white">Bachelor of Science</h4>
+              <p className="text-gray-400">Enugu State University of Science and Technology</p>
+              <p className="text-sm font-mono text-blue-400 mt-1">2017 - 2022</p>
+              <div className="mt-4 pt-4 border-t border-white/5">
+                <p className="text-sm text-gray-500">
+                  <span className="text-gray-300 font-medium">Relevant Coursework:</span> Data Structures, Web Development, Cloud Computing
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );
