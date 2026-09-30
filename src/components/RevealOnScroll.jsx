@@ -1,22 +1,39 @@
 import { useEffect, useRef } from "react"
 
-export const RevealOnScroll = ([children]) => {
+const directionClasses = {
+  up: "reveal-up",
+  down: "reveal-down",
+  left: "reveal-left",
+  right: "reveal-right",
+}
 
-    const ref = useRef(null)
+export const RevealOnScroll = ({ children, delay = 0, direction = "up" }) => {
+  const ref = useRef(null)
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                ref.current.classList.add("visible")
-            }
-        }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const el = ref.current
+          if (!el) return
+          setTimeout(() => {
+            el.classList.add("visible")
+          }, delay)
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    )
 
-        if (ref.current) observer.observe(ref.current)
-        
-        return () => observer.disconnect();
-    });
+    const el = ref.current
+    if (el) observer.observe(el)
+    return () => observer.disconnect()
+  }, [delay])
+
+  const dirClass = directionClasses[direction] || directionClasses.up
 
   return (
-    <div ref={ref} className="reveal">{children}</div>
+    <div ref={ref} className={`reveal ${dirClass}`}>
+      {children}
+    </div>
   )
 }
