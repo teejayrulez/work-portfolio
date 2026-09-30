@@ -158,7 +158,7 @@ export const Contact = () => {
               ))}
             </div>
             <p className="text-xs text-gray-600 font-mono">
-              © {new Date().getFullYear()} Mezue Tochukwu. Built with React & Tailwind CSS.
+              © {new Date().getFullYear()} Mezue Tochukwu. All rights reserved.
             </p>
           </footer>
         </RevealOnScroll>
