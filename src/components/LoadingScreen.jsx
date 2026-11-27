@@ -22,11 +22,11 @@ export const LoadingScreen = ({ onComplete }) => {
   }, [onComplete])
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#0a0a0a] text-gray-100 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-[#02040a] text-gray-100 flex flex-col items-center justify-center">
       {/* Decorative rings */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-96 h-96 border border-blue-500/10 rounded-full animate-spin-slow" />
-        <div className="absolute w-72 h-72 border border-red-500/10 rounded-full animate-spin-slow" style={{ animationDirection: 'reverse' }} />
+        <div className="absolute w-72 h-72 border border-blue-800/30 rounded-full animate-spin-slow" style={{ animationDirection: 'reverse' }} />
         <div className="absolute w-48 h-48 border border-blue-500/20 rounded-full animate-pulse-slow" />
       </div>
 
@@ -38,7 +38,7 @@ export const LoadingScreen = ({ onComplete }) => {
 
         <div className="w-[240px] sm:w-[320px] h-[3px] bg-white/5 rounded-full relative overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 transition-all duration-100 shadow-[0_0_15px_#3b82f6]"
+            className="h-full bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 transition-all duration-100 shadow-[0_0_15px_#3b82f6]"
             style={{ width: `${progress}%` }}
           />
         </div>

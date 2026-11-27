@@ -40,7 +40,7 @@ const SkillBar = ({ skill, index }) => {
       </div>
       <div className="h-2 bg-white/5 rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out relative"
+          className="h-full bg-gradient-to-r from-blue-700 to-blue-400 rounded-full transition-all duration-1000 ease-out relative"
           style={{
             width: visible ? `${skill.level}%` : "0%",
             transitionDelay: `${index * 80}ms`,
@@ -55,9 +55,9 @@ const SkillBar = ({ skill, index }) => {
 
 export const Skills = () => {
   const categories = [
-    { key: "frontend", label: "Frontend", dotClass: "bg-blue-400", textClass: "text-blue-400", direction: "left" },
-    { key: "backend",  label: "Backend",  dotClass: "bg-purple-400", textClass: "text-purple-400", direction: "up" },
-    { key: "database", label: "Database", dotClass: "bg-red-400", textClass: "text-red-400", direction: "right" },
+    { key: "frontend", label: "Frontend", dotClass: "bg-blue-300", textClass: "text-blue-300", direction: "left" },
+    { key: "backend",  label: "Backend",  dotClass: "bg-blue-400", textClass: "text-blue-400", direction: "up" },
+    { key: "database", label: "Database", dotClass: "bg-blue-500", textClass: "text-blue-500", direction: "right" },
   ]
 
   return (
@@ -68,7 +68,7 @@ export const Skills = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gradient">
               Technical Skills
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-300 to-blue-700 mx-auto rounded-full" />
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
               Technologies and tools I work with to build modern web applications
             </p>

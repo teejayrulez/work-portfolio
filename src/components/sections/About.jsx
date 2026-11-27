@@ -50,7 +50,7 @@ export const About = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gradient">
               About Me
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-300 to-blue-700 mx-auto rounded-full" />
           </div>
         </RevealOnScroll>
 
@@ -84,7 +84,7 @@ export const About = () => {
                   delay={i * 100}
                 >
                   <div className="relative group">
-                    <div className="absolute -left-[33px] sm:-left-[41px] top-1 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-blue-500 group-hover:bg-blue-500 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-300" />
+                    <div className="absolute -left-[33px] sm:-left-[41px] top-1 w-4 h-4 rounded-full bg-[#02040a] border-2 border-blue-500 group-hover:bg-blue-500 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-300" />
                     <div className="text-xs font-mono text-blue-400 mb-1">{exp.year}</div>
                     <h4 className="text-lg font-bold text-white">{exp.role}</h4>
                     <div className="text-sm text-gray-400 mb-2">{exp.company}</div>
@@ -106,7 +106,7 @@ export const About = () => {
         <RevealOnScroll delay={200} direction="right">
           <div className="glass rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-all duration-500">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400">
+              <span className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">
                 <FontAwesomeIcon icon={faGraduationCap} className="w-4 h-4" />
               </span>
               Education

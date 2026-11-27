@@ -32,7 +32,7 @@ export const Certifications = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gradient">
               Certifications & Training
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-300 to-blue-700 mx-auto rounded-full" />
           </div>
         </RevealOnScroll>
 
@@ -45,7 +45,7 @@ export const Certifications = () => {
             >
               <div className="glass rounded-2xl p-6 sm:p-8 h-full hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] group">
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-red-500/20 flex items-center justify-center text-blue-400 text-xl shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-800/30 flex items-center justify-center text-blue-400 text-xl shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <FontAwesomeIcon icon={cert.icon} />
                   </div>
                   <div>
