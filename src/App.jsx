@@ -12,6 +12,7 @@ import { Contact } from "./components/sections/Contact";
 import { BackToTop } from "./components/BackToTop";
 import { AutoHideScrollbar } from "./components/AutoHideScrollbar";
 import { ScrollToTopOnRefresh } from "./components/ScrollToTopOnRefresh";
+import { ScrollProgress } from "./components/ScrollProgress";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,16 +28,18 @@ function App() {
     <>
       <ScrollToTopOnRefresh />
       <AutoHideScrollbar />
+      <ScrollProgress />
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`min-h-screen transition-opacity duration-1000 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-[#0a0a0a] text-gray-100 relative overflow-x-hidden`}
+        } bg-[#02040a] text-gray-100 relative overflow-x-hidden`}
       >
         <div className="fixed inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-red-600/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow delay-2000" />
+          <div className="absolute inset-0 bg-grid" />
+          <div className="absolute -top-48 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-blue-700/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/3 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-blue-800/25 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
         </div>
 
         <div className="relative z-10">

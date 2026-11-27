@@ -13,7 +13,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[#0a0a0a]/98 backdrop-blur-2xl z-30 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 w-full bg-[#02040a]/98 backdrop-blur-2xl z-30 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
         menuOpen
           ? "h-screen opacity-100 pointer-events-auto"
           : "h-0 opacity-0 pointer-events-none"
@@ -30,7 +30,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
       {/* Decorative */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-red-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-800/20 rounded-full blur-3xl" />
 
       <nav className="flex flex-col items-start gap-2 relative z-10">
         {links.map((link, i) => (
@@ -48,7 +48,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             <span className="text-sm font-mono text-blue-500/60 group-hover:text-blue-400 transition-colors">
               {link.num}
             </span>
-            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-red-400 transition-all duration-300">
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-blue-600 transition-all duration-300">
               {link.label}
             </span>
           </a>

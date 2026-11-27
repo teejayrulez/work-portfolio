@@ -44,20 +44,20 @@ export const Home = () => {
         <div className="absolute top-1/4 left-[10%] font-mono text-xs text-blue-500/20 animate-float" style={{ animationDelay: '0s' }}>
           {'<Developer />'}
         </div>
-        <div className="absolute top-1/3 right-[15%] font-mono text-xs text-red-500/20 animate-float" style={{ animationDelay: '2s' }}>
+        <div className="absolute top-1/3 right-[15%] font-mono text-xs text-blue-400/20 animate-float" style={{ animationDelay: '2s' }}>
           {'const build = () => {}'}
         </div>
-        <div className="absolute bottom-1/3 left-[15%] font-mono text-xs text-purple-500/20 animate-float" style={{ animationDelay: '4s' }}>
+        <div className="absolute bottom-1/3 left-[15%] font-mono text-xs text-blue-300/20 animate-float" style={{ animationDelay: '4s' }}>
           {'npm run dev'}
         </div>
-        <div className="absolute bottom-1/4 right-[10%] font-mono text-xs text-green-500/20 animate-float" style={{ animationDelay: '1s' }}>
+        <div className="absolute bottom-1/4 right-[10%] font-mono text-xs text-blue-600/30 animate-float" style={{ animationDelay: '1s' }}>
           {'git push origin main'}
         </div>
       </div>
 
       <div className="text-center z-10 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-slide-up">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
           <span className="text-xs sm:text-sm text-gray-300 font-medium">
             Available for work
           </span>
@@ -93,7 +93,7 @@ export const Home = () => {
                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"
               />
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
 
           <a

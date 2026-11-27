@@ -31,9 +31,9 @@ export const Contact = () => {
         setFormData({ name: "", email: "", message: "" })
         setTimeout(() => setStatus("idle"), 4000)
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error("EmailJS send failed:", err?.status, err?.text ?? err)
         setStatus("error")
-        setTimeout(() => setStatus("idle"), 4000)
       })
   }
 
@@ -45,7 +45,7 @@ export const Contact = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gradient">
               Get In Touch
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-300 to-blue-700 mx-auto rounded-full" />
             <p className="text-gray-400 mt-6">
               Have a project in mind? Let's build something amazing together.
             </p>
@@ -85,7 +85,7 @@ export const Contact = () => {
             </div>
 
             <div className="relative">
-              <label htmlFor="message" className="block text-xs font-mono text-gray-500 mb-2">MESSAGE</label>
+              <label htmlFor="message" className="block text-xs font-mono text-gray-500 mb-2">REASON FOR CONTACTING</label>
               <textarea
                 id="message"
                 name="message"
@@ -93,7 +93,7 @@ export const Contact = () => {
                 rows={6}
                 value={formData.message}
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 transition-all duration-300 focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 focus:shadow-[0_0_0_3px_rgba(59,130,246,0.1)] resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="Why are you reaching out?"
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
@@ -101,7 +101,7 @@ export const Contact = () => {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="group w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3.5 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_10px_30px_rgba(59,130,246,0.4)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed relative overflow-hidden"
+              className="group w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white py-3.5 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_10px_30px_rgba(59,130,246,0.4)] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {status === "sending" && (
@@ -133,6 +133,16 @@ export const Contact = () => {
                 )}
               </span>
             </button>
+
+            {status === "error" && (
+              <p role="alert" className="text-sm text-blue-200 text-center">
+                Your message couldn't be sent. Please try again, or email{" "}
+                <a href="mailto:teejaymezue8@gmail.com" className="underline text-blue-400 hover:text-blue-300">
+                  teejaymezue8@gmail.com
+                </a>
+                .
+              </p>
+            )}
           </form>
         </RevealOnScroll>
 

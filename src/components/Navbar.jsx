@@ -51,7 +51,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav
       className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[rgba(10,10,10,0.85)] backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20"
+          ? "bg-[rgba(2,4,10,0.75)] backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20"
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -85,16 +85,11 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                 href={`#${link.id}`}
                 className={`relative px-3 lg:px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg ${
                   activeSection === link.id
-                    ? "text-white"
-                    : "text-gray-400 hover:text-white"
+                    ? "text-white bg-blue-600/20 shadow-[inset_0_0_0_1px_rgba(96,165,250,0.3)]"
+                    : "text-gray-400 hover:text-white hover:bg-blue-500/10"
                 }`}
               >
                 {link.label}
-                <span
-                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-red-500 transition-all duration-300 ${
-                    activeSection === link.id ? "w-6" : "w-0"
-                  }`}
-                />
               </a>
             ))}
             <a
